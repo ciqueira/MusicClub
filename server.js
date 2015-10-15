@@ -2,7 +2,6 @@
     app = express(),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser');
-
 var expressValidator = require('express-validator');
 
 //app.use(express.static(__dirname + '/public'))
@@ -14,7 +13,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
-require('./helpers/optionsExpressValidator.js')(app);
+//require('./helpers/optionsExpressValidator.js')(app);
 
 var mongoUri = 'mongodb://usermusic:usermusic@ds051853.mongolab.com:51853/musicclub';
 mongoose.connect(mongoUri);
@@ -25,6 +24,27 @@ db.on('error', function () {
 
 
 var port = process.env.PORT || 1337;
+
+
+var oauth = require('./controllers/oauth'),
+    music = require('./controllers/music'),
+    drive = require('./controllers/drive'),
+    user = require('./controllers/user'),
+    auth = require('./middlewares/authResource');
+    
+    app.post('/api/oauth/token', oauth.token);
+    
+    app.all('/api/*', auth); 
+
+    app.post('/api/drive', drive.sync);
+    app.get('/api/music/artist', music.allArtist);
+    app.post('/api/music/start', music.createSession);
+
+    app.get('/api/user/:user_type', user.findUserByType);
+    app.post('/api/user/:user_id/Follow', user.follow);
+    app.delete('/api/user/:user_id/Follow', user.unfollow);
+    app.get('/api/user/:keyword/searchByName', user.searchByName);
+
 
 //require(routes)(app);
 
