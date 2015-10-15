@@ -1,14 +1,10 @@
 {
-  "name": "MusicClub.WebApi",
-  "version": "0.1.0",
-  "description": "MusicClub.WebApi",
+  "name": "node-js-sample",
+  "version": "0.2.0",
+  "description": "A sample Node.js app using Express 4",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-  },
-  "author": {
-    "name": "ciqueira",
-    "email": "ciqueira@gmail.com"
   },
   "dependencies": {
     "async": "^1.4.2",
@@ -18,5 +14,22 @@
     "jsonwebtoken": "^5.0.5",
     "mongoose": "^4.1.8",
     "request": "^2.63.0"
-  }
+  },
+  "engines": {
+    "node": "4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ciqueira/MusicClub"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "author": "Mark Pundsack",
+  "contributors": [
+    "Magno Dias"
+  ],
+  "license": "MIT"
 }
