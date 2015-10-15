@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 1337;
 
-//require('./routes')(app);
+require('./routes')(app);
 
 app.listen(port);
 console.log('Listening... ');
