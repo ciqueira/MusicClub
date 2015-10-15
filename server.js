@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
-require('./helpers/optionsExpressValidator.js')(app);
+//require('./helpers/optionsExpressValidator.js')(app);
 
 var mongoUri = 'mongodb://usermusic:usermusic@ds051853.mongolab.com:51853/musicclub';
 mongoose.connect(mongoUri);
