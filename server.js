@@ -1,5 +1,6 @@
 ﻿var express = require('express'),
     app = express(),
+    routes = require('./routes'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser');
 
@@ -25,7 +26,7 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 1337;
 
-require('./routes.js')(app);
+require(routes)(app);
 
 app.listen(port);
 console.log('Listening... ');
