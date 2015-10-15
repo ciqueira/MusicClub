@@ -14,13 +14,13 @@ var expressValidator = require('express-validator');
 //     next();
 // });
 // //require('./helpers/optionsExpressValidator.js')(app);
-// 
-// var mongoUri = 'mongodb://usermusic:usermusic@ds051853.mongolab.com:51853/musicclub';
-// mongoose.connect(mongoUri);
-// var db = mongoose.connection;
-// db.on('error', function () {
-//     throw new Error('unable to connect to database at ' + mongoUri);
-// });
+
+var mongoUri = 'mongodb://usermusic:usermusic@ds051853.mongolab.com:51853/musicclub';
+mongoose.connect(mongoUri);
+var db = mongoose.connection;
+db.on('error', function () {
+    throw new Error('unable to connect to database at ' + mongoUri);
+});
 
 
 var port = process.env.PORT || 1337;
