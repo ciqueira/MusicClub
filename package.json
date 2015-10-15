@@ -16,7 +16,7 @@
     "request": "^2.63.0"
   },
   "engines": {
-    "node": "4.1.1"
+    "node": "0.12.2"
   },
   "repository": {
     "type": "git",
