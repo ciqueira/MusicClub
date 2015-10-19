@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
-require('./helpers/optionsExpressValidator.js')(app);
+//require('./helpers/optionsExpressValidator.js')(app);
 
 // var mongoUri = 'mongodb://usermusic:usermusic@ds051853.mongolab.com:51853/musicclub';
 // mongoose.connect(mongoUri);
@@ -25,7 +25,7 @@ require('./helpers/optionsExpressValidator.js')(app);
 
 var port = process.env.PORT || 1337;
 
-require('./routes')(app);
+//require('./routes')(app);
 
 app.listen(port);
 console.log('Listening... ');
