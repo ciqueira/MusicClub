@@ -1,5 +1,5 @@
-﻿// var mongoose = require('mongoose'),
-//     Music = mongoose.model('Music'),
+﻿ var mongoose = require('mongoose'),
+     Music = mongoose.model('Music');
 //     userController = require('./user.js');
 // var jwt = require('jsonwebtoken');
 
@@ -29,12 +29,9 @@ exports.addArray = function (musicOneDrive, callback) {
 };
 
 exports.allArtist = function (req, res) {
-    
-    return res.status(200).json({ result: "ok"});
-    // 
-    // Music.collection.distinct('artist', function (err, docs) {
-    //     return res.status(200).json({ result: docs.getUnique().sort() });
-    // });
+    Music.collection.distinct('artist', function (err, docs) {
+        return res.status(200).json({ result: docs.getUnique().sort() });
+    });
 };
 exports.createSession = function (req, res) {
     
