@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
 
 var port = process.env.PORT || 1337;
 
-//require('./routes')(app);
+var teste = require('./routes.js')(app);
 
 app.listen(port);
 console.log('Listening... ');
