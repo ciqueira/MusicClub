@@ -17,7 +17,7 @@ Array.prototype.getUnique = function () {
 
 exports.addArray = function (musicOneDrive, callback) {
     
-    callback(null,"OK");
+    
     
     // Music.collection.deleteMany({ sharedBy : musicOneDrive[0].sharedBy },
     //   function (errorA, results) {
@@ -29,6 +29,8 @@ exports.addArray = function (musicOneDrive, callback) {
 };
 
 exports.allArtist = function (req, res) {
+    
+    return res.status(200).json({ result: "ok"});
     // 
     // Music.collection.distinct('artist', function (err, docs) {
     //     return res.status(200).json({ result: docs.getUnique().sort() });
