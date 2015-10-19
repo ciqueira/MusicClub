@@ -1,7 +1,7 @@
 ﻿module.exports = function (app) {
     
     // var oauth = require('./controllers/oauth'),
-    //     music = require('./controllers/music'),
+    var    music = require('./controllers/music');
     //     drive = require('./controllers/drive'),
     //     user = require('./controllers/user'),
      var   auth = require('./middlewares/authResource');
@@ -11,7 +11,7 @@
     app.all('/api/*', auth); 
 
 //     app.post('/api/drive', drive.sync);
-//     app.get('/api/music/artist', music.allArtist);
+     app.get('/api/music/artist', music.allArtist);
 //     app.post('/api/music/start', music.createSession);
 // 
 //     app.get('/api/user/:user_type', user.findUserByType);
