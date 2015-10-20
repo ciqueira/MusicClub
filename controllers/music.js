@@ -1,5 +1,5 @@
 ﻿var mongoose = require('mongoose'),
-    Music = require('../models/music');// mongoose.model('Music');
+    musicSchema = require('../models/music');// mongoose.model('Music');
 //     userController = require('./user.js');
 // var jwt = require('jsonwebtoken');
 
@@ -20,7 +20,7 @@
 //     updateDate: Number
 // });
 // 
-// var Music = mongoose.model('Music', musicSchema);
+var Music = mongoose.model('Music', musicSchema);
 
 Array.prototype.getUnique = function () {
     var u = {}, a = [];
