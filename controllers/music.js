@@ -1,25 +1,25 @@
-﻿var mongoose = require('mongoose'),
-    musicSchema = require('../models/music');// mongoose.model('Music');
+﻿var mongoose = require('mongoose');
+    //Music = require('../models/music');// mongoose.model('Music');
 //     userController = require('./user.js');
 // var jwt = require('jsonwebtoken');
 
-// var musicSchema = new mongoose.Schema({
-//     idFile: String,
-//     sharedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
-//     size: Number,
-//     nameFile: String,
-//     streamUrl: String,
-//     album: String,
-//     albumArtist: String,
-//     artist: String,
-//     //composers: String,
-//     duration: Number,
-//     title: String,
-//     thumbnailUrl: String,
-//     createDate: Number,
-//     updateDate: Number
-// });
-// 
+var musicSchema = new mongoose.Schema({
+    idFile: String,
+    sharedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
+    size: Number,
+    nameFile: String,
+    streamUrl: String,
+    album: String,
+    albumArtist: String,
+    artist: String,
+    //composers: String,
+    duration: Number,
+    title: String,
+    thumbnailUrl: String,
+    createDate: Number,
+    updateDate: Number
+});
+
 var Music = mongoose.model('Music', musicSchema);
 
 Array.prototype.getUnique = function () {
