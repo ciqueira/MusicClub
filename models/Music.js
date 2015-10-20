@@ -1,8 +1,9 @@
 ﻿var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var musicSchema = new mongoose.Schema({
+var musicSchema = new Schema({
     idFile: String,
-    sharedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
+    sharedBy: { type: Schema.ObjectId, ref: 'User' },
     size: Number,
     nameFile: String,
     streamUrl: String,
@@ -19,4 +20,4 @@ var musicSchema = new mongoose.Schema({
 
 var Music = mongoose.model('Music', musicSchema);
 
-//module.exports = Music;
+module.exports = Music;
