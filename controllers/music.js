@@ -1,5 +1,5 @@
 ﻿var mongoose = require('mongoose'),
-    Music = require('../models/music');// mongoose.model('Music');
+    Music = require('./../models/music');// mongoose.model('Music');
 //     userController = require('./user.js');
 // var jwt = require('jsonwebtoken');
 
