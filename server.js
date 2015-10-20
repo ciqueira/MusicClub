@@ -19,12 +19,12 @@ require('./helpers/optionsExpressValidator.js')(app);
 var dbName = "/musicclub";
 //var connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +  process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" + process.env.OPENSHIFT_MONGODB_DB_HOST + dbName;
 
-var connection_string = 
-  process.env.MONGOLAB_URI || 
-  process.env.MONGOHQ_URL || 
-  'mongodb://localhost/HelloMongoose';
+// var connection_string = 
+//   process.env.MONGOLAB_URI || 
+//   process.env.MONGOHQ_URL || 
+//   'mongodb://localhost/HelloMongoose';
 
-//var connection_string = 'mongodb://usermusic:usermusic@ds051853.mongolab.com:51853/musicclub';
+var connection_string = 'mongodb://usermusic:usermusic@ds051853.mongolab.com:51853/musicclub';
 mongoose.connect(connection_string);
 var db = mongoose.connection;
 db.on('error', function () {
