@@ -1,7 +1,26 @@
-﻿//  var mongoose = require('mongoose'),
+﻿  var mongoose = require('mongoose');
 //      Music = mongoose.model('Music');
 //     userController = require('./user.js');
 // var jwt = require('jsonwebtoken');
+
+var musicSchema = new mongoose.Schema({
+    idFile: String,
+    sharedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
+    size: Number,
+    nameFile: String,
+    streamUrl: String,
+    album: String,
+    albumArtist: String,
+    artist: String,
+    //composers: String,
+    duration: Number,
+    title: String,
+    thumbnailUrl: String,
+    createDate: Number,
+    updateDate: Number
+});
+
+var Music = mongoose.model('Music', musicSchema);
 
 Array.prototype.getUnique = function () {
     var u = {}, a = [];
@@ -29,10 +48,10 @@ exports.addArray = function (musicOneDrive, callback) {
 };
 
 exports.allArtist = function (req, res) {
-    return res.status(200).json({ result: "docs.getUnique().sort()" });
-    // Music.collection.distinct('artist', function (err, docs) {
-    //     return res.status(200).json({ result: docs.getUnique().sort() });
-    // });
+    //return res.status(200).json({ result: "docs.getUnique().sort()" });
+    Music.collection.distinct('artist', function (err, docs) {
+        return res.status(200).json({ result: docs.getUnique().sort() });
+    });
 };
 exports.createSession = function (req, res) {
     

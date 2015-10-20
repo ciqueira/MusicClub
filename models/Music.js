@@ -1,8 +1,8 @@
 ﻿var mongoose = require('mongoose');
 
-var musicSchema = new Schema({
+var musicSchema = new mongoose.Schema({
     idFile: String,
-    sharedBy: { type: Schema.ObjectId, ref: 'User' },
+    sharedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
     size: Number,
     nameFile: String,
     streamUrl: String,
