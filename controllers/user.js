@@ -1,5 +1,5 @@
 ﻿var mongoose = require('mongoose'),
-    User = mongoose.model('User');
+    User = require('../models/User');
 var jwt = require('jsonwebtoken');
 
 exports.add = function (userData, req, res, callback) {

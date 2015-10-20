@@ -1,6 +1,6 @@
 ﻿var userData, userDataUp, musicOneDrive = [], isRefreshToken = false,
-    User = require('../models/user'),
-    Music = require('../models/music'),
+    User = require('../models/User'),
+    Music = require('../models/Music'),
     userController = require('./user.js'),
     musicController = require('./music.js'),
     oneDrive = require('./core/oneDrive');

@@ -1,5 +1,5 @@
 ﻿var request = require("request"),
-    Music = require('../../models/music');
+    Music = require('../../models/Music');
 
 exports.forMusic = function (resultData, _id, name) {
     var musicOneDrive = [];

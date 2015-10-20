@@ -24,6 +24,4 @@ var userSchema = new Schema({
     updateDate: Number
 });
 
-var User = mongoose.model('User', userSchema);
-
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);

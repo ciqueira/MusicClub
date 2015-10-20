@@ -1,5 +1,5 @@
 ﻿var drive = require('./drive.js'),
-    User = require('../models/user'),
+    User = require('../models/User'),
     userController = require('./user.js'),
     oneDrive = require('./core/oneDrive');
 var async = require('async');
